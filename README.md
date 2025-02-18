@@ -19,7 +19,7 @@
 ![image](https://github.com/user-attachments/assets/95ef434d-3d17-4fcb-a79a-608234e27fa3)
 ![image](https://github.com/user-attachments/assets/f6b0b24c-e4ff-4b1f-9915-52ebca3aee30)
 
-5.Команда (<b>sudo systemctl enable docker --now</b>включает автозапуск Docker и сразу же запускает его
+5.Команда (<b>sudo systemctl enable docker --now</b>)включает автозапуск Docker и сразу же запускает его
 
 ![image](https://github.com/user-attachments/assets/2c0f0d31-d47b-47a2-a5c7-2602d98b760e)
 
