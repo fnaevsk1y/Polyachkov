@@ -1,5 +1,7 @@
 # LAB_1
-Начало работы 
+Начало работы
+
+`pwd` - Проверка какая директория открыта сейчас
 
 1.Скачиваем пакет wget, с помощью команды(<b>sudo yum install wget</b>).Данная утилита wget в Linux предназначена для скачивания файлов из интернета. Она поддерживает протоколы HTTP, HTTPS и FTP, что позволяет загружать как отдельные файлы, так и целые веб-сайты.
 
@@ -75,6 +77,16 @@
 
 ![image](https://github.com/user-attachments/assets/567e247e-760f-46de-8203-83de860deaa4)
 ![image](https://github.com/user-attachments/assets/9869ce1d-da35-49d5-9263-1f4097746796)
+
+19.После того как мы после закрытия VM открываем его по новой что бы запустить <b>docker compose</b> нужно ввести эти команды `cd grafana_stack_for_docker` и `sudo docker compose up -d`
+
+![image](https://github.com/user-attachments/assets/6ffc2b65-4641-4084-a90f-4432d6db4afe)
+
+20.Что бы зайти в конфигурацию <b>docker-compose.yaml</b> нам нужно ввести команду `vi docker-compose.yaml` и что бы от туда выйти нужно нажать кнопки `ESC`,`Правый shift+:` и ввести `wq`
+
+![image](https://github.com/user-attachments/assets/ee93eb33-e4bb-493c-8df6-04374d924caa)
+
+
 
 
 
