@@ -127,23 +127,41 @@
 
 ![image](https://github.com/user-attachments/assets/ee93eb33-e4bb-493c-8df6-04374d924caa)
 
+21.Данной командой мы переносим `prometheus.yaml` в правильную папку конфига
+
+        mv prometheus.yaml /mnt/common_volume/swarm/grafana/config
+
+![image](https://github.com/user-attachments/assets/15ba16d0-5fe7-4878-b4a1-d2f842a6f417)
+
+22.С помощью этих двух команд, первое что мы делаем это переходим в папку с конфигом, а второй проверяем смогли мы удачно перенсти этот файл
+
+        cd /mnt/common_volume/swarm/grafana/config
+        ls
+
+![image](https://github.com/user-attachments/assets/266f6c2b-bd36-4f04-b1e5-f487450ad8eb)
+
 21.<b>GRAFANA</b>
 
-переходим на сайт `localhost:3000`
+* переходим на сайт `localhost:3000`
 
-User & Password GRAFANA: `admin`
+* User & Password GRAFANA: `admin`
 
-Код графаны: `3000`
-Код прометеуса: `http://prometheus:9090`
+* Код графаны: `3000`
 
+* Код прометеуса: `http://prometheus:9090`
+
+<ul>
 в меню выбираем вкладку Dashboards и создаем Dashboard
 
 ждем кнопку `+Add visualization`, а после "Configure a new data source"
 
 выбираем `Prometheus`
+</ul>
 
-Connection
+* Connection
 
+<ul>
+    
 http://prometheus:9090
 
 Authentication
@@ -152,9 +170,9 @@ Basic authentication
 
 User: `admin`
 Password: `admin`
-
-Нажимаем на Save & test и должно показывать зелёную галочку
-
+</ul>
+* Нажимаем на Save & test и должно показывать зелёную галочку
+<ul>
 в меню выбираем вкладку Dashboards и создаем Dashboard
 
 ждем кнопку "Import dashboard"
@@ -162,12 +180,11 @@ Password: `admin`
 Find and import dashboards for common applications at grafana.com/dashboards: 1860 //ждем кнопку Load
 
 Select Prometheus ждем кнопку "Import"
+</ul>
 ![image](https://github.com/user-attachments/assets/d309fe5c-1a98-4c1d-9869-2582773fd3b3)
 
 
-![image](https://github.com/user-attachments/assets/eed01f6f-7cd5-4518-937a-42aca1eea3f9)
-![image](https://github.com/user-attachments/assets/15ba16d0-5fe7-4878-b4a1-d2f842a6f417)
-![image](https://github.com/user-attachments/assets/266f6c2b-bd36-4f04-b1e5-f487450ad8eb)
+
 
 
 
