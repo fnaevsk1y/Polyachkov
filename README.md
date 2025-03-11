@@ -171,8 +171,11 @@ Basic authentication
 User: `admin`
 Password: `admin`
 </ul>
+
 * Нажимаем на Save & test и должно показывать зелёную галочку
+
 <ul>
+    
 в меню выбираем вкладку Dashboards и создаем Dashboard
 
 ждем кнопку "Import dashboard"
