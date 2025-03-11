@@ -181,6 +181,7 @@ Find and import dashboards for common applications at grafana.com/dashboards: 18
 
 Select Prometheus ждем кнопку "Import"
 </ul>
+
 ![image](https://github.com/user-attachments/assets/d309fe5c-1a98-4c1d-9869-2582773fd3b3)
 
 
