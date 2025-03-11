@@ -24,7 +24,7 @@
 
 4. С помощью команды будет установлено программное обеспечение Docker и все необходимые его компоненты.
 
-    sudo yum install docker-ce docker-ce-cli containerd.io
+        sudo yum install docker-ce docker-ce-cli containerd.io
 
 ![image](https://github.com/user-attachments/assets/95ef434d-3d17-4fcb-a79a-608234e27fa3)
 ![image](https://github.com/user-attachments/assets/f6b0b24c-e4ff-4b1f-9915-52ebca3aee30)
@@ -91,36 +91,67 @@
 
 15.Эта команда создаёт пустой файл grafana.ini в указанной директории, если его там нет, или обновляет время последнего доступа и изменения, если файл уже существует.
 
+    touch /mnt/common_volume/grafana/grafana-config/grafana.ini
+
 ![image](https://github.com/user-attachments/assets/10edca70-2c41-4bc5-9239-271e038d1235)
 
 16.Эта команда копирует все файлы и директории из каталога `config/` в каталог `/mnt/common_volume/swarm/grafana/config/`. Если файлы с такими же именами уже существуют в целевом каталоге, они будут перезаписаны.
 
+    cp config/* /mnt/common_volume/swarm/grafana/config/
+
 ![image](https://github.com/user-attachments/assets/9df2d390-b56f-464d-81b5-eb25920e85fc)
 
-17.`mv grafana.yaml docker-compose.yaml` эта команда переименовывает файл `grafana.yaml` в `docker-compose.yaml`, что бы не потерять этот файл проверяем с помощью команды <b>ls</b>
+17.Эта команда переименовывает файл `grafana.yaml` в `docker-compose.yaml`, что бы не потерять этот файл проверяем с помощью команды <b>ls</b>
+
+    mv grafana.yaml docker-compose.yaml
 
 ![image](https://github.com/user-attachments/assets/07351c31-464e-4da0-8d13-9eb7817fc36c)
 
-18.`sudo docker compose up -d` Эта команда используется для запуска и управления контейнерами Docker с помощью Docker Compose
+18.Эта команда используется для запуска и управления контейнерами Docker с помощью Docker Compose
+
+    sudo docker compose up -d
 
 ![image](https://github.com/user-attachments/assets/567e247e-760f-46de-8203-83de860deaa4)
 ![image](https://github.com/user-attachments/assets/9869ce1d-da35-49d5-9263-1f4097746796)
 
 19.После того как мы после закрытия VM открываем его по новой что бы запустить <b>docker compose</b> нужно ввести эти команды `cd grafana_stack_for_docker` и `sudo docker compose up -d`
 
+    cd grafana_stack_for_docker
+    sudo docker compose up -d
+
 ![image](https://github.com/user-attachments/assets/6ffc2b65-4641-4084-a90f-4432d6db4afe)
 
 20.Что бы зайти в конфигурацию <b>docker-compose.yaml</b> нам нужно ввести команду `vi docker-compose.yaml` и что бы от туда выйти нужно нажать кнопки `ESC`,`Правый shift+:` и ввести `wq`
 
+    vi docker-compose.yaml
+
 ![image](https://github.com/user-attachments/assets/ee93eb33-e4bb-493c-8df6-04374d924caa)
 
-///
+переходим на сайт localhost:3000
+User & Password GRAFANA: admin
+Код графаны: 3000
+Код прометеуса: http://prometheus:9090
+в меню выбираем вкладку Dashboards и создаем Dashboard
+ждем кнопку +Add visualization, а после "Configure a new data source"
+выбираем Prometheus
+Connection
+http://prometheus:9090
+Authentication
+Basic authentication
+User: admin
+Password: admin
+Нажимаем на Save & test и должно показывать зелёную галочку
+в меню выбираем вкладку Dashboards и создаем Dashboard
+ждем кнопку "Import dashboard"
+Find and import dashboards for common applications at grafana.com/dashboards: 1860 //ждем кнопку Load
+Select Prometheus ждем кнопку "Import"
+![image](https://github.com/user-attachments/assets/d309fe5c-1a98-4c1d-9869-2582773fd3b3)
+
 
 ![image](https://github.com/user-attachments/assets/eed01f6f-7cd5-4518-937a-42aca1eea3f9)
-
 ![image](https://github.com/user-attachments/assets/15ba16d0-5fe7-4878-b4a1-d2f842a6f417)
 ![image](https://github.com/user-attachments/assets/266f6c2b-bd36-4f04-b1e5-f487450ad8eb)
-![image](https://github.com/user-attachments/assets/d309fe5c-1a98-4c1d-9869-2582773fd3b3)
+
 
 
 
