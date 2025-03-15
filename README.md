@@ -188,11 +188,14 @@ Select Prometheus ждем кнопку "Import"
 ![image](https://github.com/user-attachments/assets/d309fe5c-1a98-4c1d-9869-2582773fd3b3)
 
 
+///////
+![image](https://github.com/user-attachments/assets/b7162512-8965-4fc1-b6a4-a1ec3d1e8176)
 
+![image](https://github.com/user-attachments/assets/bbb896db-430c-4ed9-9808-eeb7ca7dbe09)
 
+![image](https://github.com/user-attachments/assets/d2e0a94b-b4da-499d-a24e-3de6c6e0cc92)
 
-
-
+![image](https://github.com/user-attachments/assets/c7cad968-09e9-4aaf-ac42-51c753c7b750)
 
 
 
