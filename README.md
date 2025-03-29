@@ -140,7 +140,7 @@
 
 ![image](https://github.com/user-attachments/assets/266f6c2b-bd36-4f04-b1e5-f487450ad8eb)
 
-21.<b>GRAFANA</b>
+# Grafana
 
 * переходим на сайт `localhost:3000`
 
@@ -187,15 +187,49 @@ Select Prometheus ждем кнопку "Import"
 
 ![image](https://github.com/user-attachments/assets/d309fe5c-1a98-4c1d-9869-2582773fd3b3)
 
+# Victoria
+Вводим команду `echo -e "# TYPE light_metric1 gauge\nlight_metric1 0" | curl --data-binary @- http://localhost:8428/api/v1/import/prometheus` которая, отправляет бинарные данные (например, метрики в формате Prometheus) на локальный сервер, который слушает на порту 8428.
 
-///////
 ![image](https://github.com/user-attachments/assets/b7162512-8965-4fc1-b6a4-a1ec3d1e8176)
 
-![image](https://github.com/user-attachments/assets/bbb896db-430c-4ed9-9808-eeb7ca7dbe09)
+Переходим в браузере по ссылке http://localhost:8428/, открывается такое меню в нём нужно выбрать vmui
+
+![image](https://github.com/user-attachments/assets/c7cad968-09e9-4aaf-ac42-51c753c7b750)
+
+Вписываем light_metric1 и нажимаем Execute Query
 
 ![image](https://github.com/user-attachments/assets/d2e0a94b-b4da-499d-a24e-3de6c6e0cc92)
 
-![image](https://github.com/user-attachments/assets/c7cad968-09e9-4aaf-ac42-51c753c7b750)
+Переходим на http://localhost:3000 выбираем Dashboard и нажимаем New Dashboard, далее Add Visualization
+
+![image](https://github.com/user-attachments/assets/44b1b426-823e-4552-9ac4-ea050677110b)
+
+Нажимаем Configure a new data source и выбираем Prometheus
+
+![image](https://github.com/user-attachments/assets/08d5ef99-dbc9-488c-bdd1-85995f6388a2)
+
+Вписываем:
+
+Name: vik
+
+Connection: http://victoriametrics:8428
+
+Нажимаем Save & Test
+
+![image](https://github.com/user-attachments/assets/45dd1191-2616-4935-87c2-b3a66700e1d6)
+
+Вписываем light_metric1
+
+![image](https://github.com/user-attachments/assets/7cb40d5c-4853-42f1-9efc-ff9aaaa88bbb)
+
+Выходит панель с графиком, где есть активность light_metric1
+
+![image](https://github.com/user-attachments/assets/bbb896db-430c-4ed9-9808-eeb7ca7dbe09)
+
+
+
+
+
 
 
 
